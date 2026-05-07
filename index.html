@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damir & Zhanerke</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="icon" type="image/png" href="./static/img/heart-01__14493.webp">
+</head>
+
+<body>
+
+    <nav>
+        <a href="#hero" class="nav-logo">Д & Ж</a>
+        <ul class="nav-links">
+            <li><a href="#countdown" data-i18n="nav_countdown">До свадьбы</a></li>
+            <li><a href="#details" data-i18n="nav_details">Детали</a></li>
+            <li><a href="#dresscode" data-i18n="nav_dresscode">Дресс-код</a></li>
+        </ul>
+        <button class="lang-btn" onclick="toggleLang()">
+            <span class="lang-opt active" id="ru-label">РУ</span>
+            <span style="opacity:0.25">|</span>
+            <span class="lang-opt" id="kz-label">ҚАЗ</span>
+        </button>
+    </nav>
+
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-lines"></div>
+        <div class="hero-content">
+            <p class="hero-pre" data-i18n="hero_pre">Мы приглашаем вас разделить с нами этот особенный день</p>
+            <div class="hero-names">
+                Дамир
+                <span class="hero-amp">&</span>
+                Жанерке
+            </div>
+            <div class="hero-date">
+                <div class="hero-date-line">
+                    <span data-i18n="hero_date">1 августа 2025</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span data-i18n="scroll">Листай</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+    <div class="music-divider">
+        <div class="line"></div>
+        <button id="musicControl" class="music-btn-inline">
+            <span class="music-icon" id="musicIcon">♪</span>
+        </button>
+        <div class="line"></div>
+    </div>
+
+    <section id="countdown">
+        <p class="section-label reveal" data-i18n="cd_label">Время до торжества</p>
+        <h2 class="section-title reveal" data-i18n="cd_title">Осталось совсем немного</h2>
+        <div class="countdown-grid reveal">
+            <div class="countdown-item">
+                <div class="countdown-num" id="days">—</div>
+                <div class="countdown-label" data-i18n="cd_days">Дней</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-num" id="hours">—</div>
+                <div class="countdown-label" data-i18n="cd_hours">Часов</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-num" id="minutes">—</div>
+                <div class="countdown-label" data-i18n="cd_min">Минут</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-num" id="seconds">—</div>
+                <div class="countdown-label" data-i18n="cd_sec">Секунд</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="details">
+        <p class="section-label reveal" data-i18n="det_label">Детали события</p>
+        <h2 class="section-title reveal" data-i18n="det_title">Где и когда</h2>
+        <div class="details-grid reveal">
+            <div class="detail-block">
+                <span class="detail-icon">◇</span>
+                <h3 data-i18n="det_ceremony">Церемония</h3>
+                <p data-i18n="det_ceremony_p">Место проведения церемонии<br>Адрес, город</p>
+                <span class="detail-time">16:00</span>
+            </div>
+            <div class="details-divider"></div>
+            <div class="detail-block">
+                <span class="detail-icon">◇</span>
+                <h3 data-i18n="det_banquet">Банкет</h3>
+                <p data-i18n="det_banquet_p">Название ресторана<br>Адрес, город</p>
+                <span class="detail-time">18:00</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="dresscode">
+        <p class="section-label reveal" data-i18n="dc_label">Дресс-код</p>
+        <h2 class="section-title reveal" data-i18n="dc_title">Цветовая палитра вечера</h2>
+        <p class="reveal" data-i18n="dc_desc"
+            style="color:var(--muted);font-size:0.72rem;letter-spacing:0.05em;margin-top:-1.5rem;line-height:2;">
+            Просим придерживаться тонов, которые создадут гармоничную атмосферу
+        </p>
+        <div class="palette reveal">
+            <div class="palette-swatch">
+                <div class="swatch" style="background:#faf8f4;"></div>
+                <span class="swatch-name" data-i18n="c1">Белый</span>
+            </div>
+            <div class="palette-swatch">
+                <div class="swatch" style="background:#ede5d8;"></div>
+                <span class="swatch-name" data-i18n="c2">Бежевый</span>
+            </div>
+            <div class="palette-swatch">
+                <div class="swatch" style="background:#000000;"></div>
+                <span class="swatch-name" data-i18n="c3">Черный</span>
+            </div>
+            <div class="palette-swatch">
+                <div class="swatch" style="background:#c9a96e;"></div>
+                <span class="swatch-name" data-i18n="c4">Золото</span>
+            </div>
+            <div class="palette-swatch">
+                <div class="swatch" style="background:#a07840;"></div>
+                <span class="swatch-name" data-i18n="c5">Бронза</span>
+            </div>
+        </div>
+    </section>
+
+    <audio id="bgMusic" loop>
+        <source src="./static/img/paulyudin-love-wedding-160695.mp3" type="audio/mpeg">
+    </audio>
+    <footer>
+    <div class="footer-names">Дамир & Жанерке</div>
+    <p class="footer-date">1 · 08 · 2026</p>
+</footer>
+
+    <script src="./static/js/main.js"></script>
+    
+</body>
+
+</html>
