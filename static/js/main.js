@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+
      const i18n = {
     ru: {
       nav_countdown: 'До свадьбы', nav_details: 'Детали', nav_dresscode: 'Дресс-код',
@@ -125,4 +125,3 @@ if (musicBtn && music) {
         }
     });
 }
-});
