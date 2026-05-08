@@ -67,7 +67,7 @@
   }
 
   function updateCountdown() {
-    const weddingDate = new Date('August 1, 2026 00:00:00').getTime();
+    const weddingDate = new Date('July 25, 2026 15:00:00').getTime();
     const now = new Date().getTime();
     const distance = weddingDate - now;
 
@@ -127,3 +127,31 @@ if (musicBtn && music) {
         }
     });
 }
+const cards = document.querySelectorAll('.card-photo');
+let topIndex = cards.length - 1;
+
+function updateDeck() {
+    cards.forEach((card, i) => {
+        card.style.zIndex = i;
+    });
+}
+
+updateDeck();
+
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        const visibleCards = [...cards].filter(c => !c.classList.contains('gone'));
+        if (visibleCards.length === 0) return;
+
+        const top = visibleCards[visibleCards.length - 1];
+        top.classList.add('gone');
+
+        setTimeout(() => {
+            top.classList.remove('gone');
+            top.style.zIndex = 0;
+            const deck = document.querySelector('.deck');
+            deck.prepend(top);
+            updateDeck();
+        }, 500);
+    });
+});

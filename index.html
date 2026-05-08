@@ -19,7 +19,6 @@
         <ul class="nav-links">
             <li><a href="#countdown" data-i18n="nav_countdown">До свадьбы</a></li>
             <li><a href="#details" data-i18n="nav_details">Детали</a></li>
-            <li><a href="#dresscode" data-i18n="nav_dresscode">Дресс-код</a></li>
         </ul>
         <button class="lang-btn" onclick="toggleLang()">
             <span class="lang-opt active" id="ru-label">РУ</span>
@@ -40,7 +39,7 @@
             </div>
             <div class="hero-date">
                 <div class="hero-date-line">
-                    <span data-i18n="hero_date">1 августа 2026</span>
+                    <span data-i18n="hero_date">25 июля 2026</span>
                 </div>
             </div>
         </div>
@@ -56,6 +55,24 @@
         </button>
         <div class="line"></div>
     </div>
+    <section id="gallery">
+        
+        <div class="deck">
+            <div class="card-photo" style="--i:0">
+                <img src="./static/img/5471920921204429906.jpg" alt="">
+            </div>
+            <div class="card-photo" style="--i:2">
+                <img src="./static/img/5471920921204429904.jpg" alt="">
+            </div>
+            <div class="card-photo" style="--i:1">
+                <img src="./static/img/5471920921204429905.jpg" alt="">
+            </div>
+            
+            
+            
+        </div>
+        <p class="deck-hint">нажми на фото</p>
+    </section>
 
     <section id="countdown">
         <p class="section-label reveal" data-i18n="cd_label">Время до торжества</p>
@@ -83,58 +100,20 @@
     <section id="details">
         <p class="section-label reveal" data-i18n="det_label">Детали события</p>
         <h2 class="section-title reveal" data-i18n="det_title">Где и когда</h2>
-        <div class="details-grid reveal">
+        <div class="details-single reveal">
             <div class="detail-block">
                 <span class="detail-icon">◇</span>
-                <h3 data-i18n="det_ceremony">Церемония</h3>
-                <p data-i18n="det_ceremony_p">Место проведения церемонии<br>Адрес, город</p>
-                <span class="detail-time">16:00</span>
-            </div>
-            <div class="details-divider"></div>
-            <div class="detail-block">
-                <span class="detail-icon">◇</span>
-                <h3 data-i18n="det_banquet">Банкет</h3>
-                <p data-i18n="det_banquet_p">Название ресторана<br>Адрес, город</p>
-                <span class="detail-time">18:00</span>
+                <h3 data-i18n="det_ceremony">Банкет</h3>
+                <p data-i18n="det_ceremony_p">Место проведения церемонии<br>Петропавловск, Greenwood (CLICK)</p>
+                <a href="https://2gis.kz/petropavlovsk/firm/70000001043590496" target="_blank">
+                    <img src="./static/img/2GIS.png" alt="Greenwood" style="width: 50px; height: auto; margin-top:30px">
+                </a>
+                <span class="detail-time">15:00</span>
             </div>
         </div>
     </section>
 
     <section id="dresscode">
-        <p class="section-label reveal" data-i18n="dc_label">Дресс-код</p>
-        <h2 class="section-title reveal" data-i18n="dc_title">Цветовая палитра вечера</h2>
-        <p class="reveal" data-i18n="dc_desc"
-            style="color:var(--muted);font-size:0.72rem;letter-spacing:0.05em;margin-top:-1.5rem;line-height:2;">
-            Просим придерживаться тонов, которые создадут гармоничную атмосферу
-        </p>
-        <div class="palette reveal">
-            <div class="palette-swatch">
-                <div class="swatch" style="background:#faf8f4;"></div>
-                <span class="swatch-name" data-i18n="c1">Белый</span>
-            </div>
-            <div class="palette-swatch">
-                <div class="swatch" style="background:#ede5d8;"></div>
-                <span class="swatch-name" data-i18n="c2">Бежевый</span>
-            </div>
-            <div class="palette-swatch">
-                <div class="swatch" style="background:#000000;"></div>
-                <span class="swatch-name" data-i18n="c3">Черный</span>
-            </div>
-            <div class="palette-swatch">
-                <div class="swatch" style="background:#c9a96e;"></div>
-                <span class="swatch-name" data-i18n="c4">Золото</span>
-            </div>
-            <div class="palette-swatch">
-                <div class="swatch" style="background:#a07840;"></div>
-                <span class="swatch-name" data-i18n="c5">Бронза</span>
-            </div>
-        </div>
-    </section>
-
-    <audio id="bgMusic" loop>
-        <source src="./static/img/paulyudin-love-wedding-160695.mp3" type="audio/mpeg">
-    </audio>
-    <section id="privacy" style="padding-bottom: 2rem;">
         <div class="reveal" style="text-align: center; max-width: 600px; margin: 0 auto; padding: 0 20px;">
             <p style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.1rem; color: var(--muted); line-height: 1.6;">
                 <span style="display: block; margin-bottom: 10px; font-weight: 400; letter-spacing: 0.1em;">P.S.</span>
@@ -145,13 +124,14 @@
             </p>
         </div>
     </section>
+
+    <audio id="bgMusic" loop>
+        <source src="./static/img/proprihome.fr - Young Beautiful Lana Del Rey Elevate Duo - Sax Violin cover.mp3" type="audio/mpeg">
+    </audio>
     <footer>
     <div class="footer-names">Дамир & Жанерке</div>
-    <p class="footer-date">1 · 08 · 2026</p>
+    <p class="footer-date">25 · 07 · 2026</p>
 </footer>
-
     <script src="./static/js/main.js"></script>
-    
 </body>
-
 </html>
